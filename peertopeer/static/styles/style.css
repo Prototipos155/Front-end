@@ -7,7 +7,7 @@
   --color3: #567EBB;
   --color4: #5B88A5;
   --color5: #606D80;
-  --secondary: #DCE0E6;
+  --secondary: #e0e0e0;
 }
 * {
   margin: 0;
@@ -140,11 +140,11 @@ main p{
   margin-bottom: 15px;
 }
 .container{
-  border: 1px solid var(--hover);
   border-radius: 1em;
   margin-bottom: 20px;
   padding: min(3em, 15%);
-
+  background: #e0e0e0;
+  box-shadow:  41px 41px 82px #5a5a5a, -41px -41px 82px #ffffff;
   h2, p { margin-top: 1em }
 }
 
@@ -221,10 +221,164 @@ main p{
 }
 
 
+.form-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
+.form-registro h4 {
+  margin-bottom: 0.5em;
+  margin-top: 2rem;
+  color: var(--primary);
+}
+
+.form-title {
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 1.5rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox .checkmark {
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background-color: #ffffff2b;
+  box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+        #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox .checkmark::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+  box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.checkbox input:checked + .checkmark {
+  background-color: #22cc3f;
+  box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+        rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+}
+
+.checkbox input:checked + .checkmark::after {
+  background-color: white;
+}
+
+.checkbox .label {
+  margin-right: 10px;
+  user-select: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.input {
+ border: none;
+ padding: 1rem;
+ border-radius: 0.5rem;
+ background: #e8e8e8;
+ box-shadow: 20px 20px 60px #c5c5c5,
+		-20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+
+.input:focus {
+ outline-color: #e8e8e8;
+ background: #e8e8e8;
+ box-shadow: inset 20px 20px 60px #c5c5c5,
+		inset -20px -20px 60px #ffffff;
+ transition: 0.3s;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.25em;
+}
+
+button.btn-registrarse {
+  width: 20%;
+  padding: 1em;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-registrarse:hover {
+  background-color: var(--hover);
+}
+
+
+.container {
+  border-radius: 1em;
+  padding: 2em;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff
+}
+
+@media(max-width: 800px) {
+  .form-registro {
+      gap: 0.5em;
+  }
+
+  button.btn-registrarse {
+      padding: 0.75em;
+      padding-right: 2rem;
+      width: 100%;
+      margin-top: 0.5rem; 
+  }
+
+  .container {
+      padding: 1.5em;
+  }
+  .form-title{
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 1047px) {
+  button.btn-registrarse {
+    padding: 0.75em;
+    padding-right: 2rem;
+    width: 80%;
+    margin-top: 0.5rem; 
+}
+}
+
+.title{
+  color: var(--primary);
+  margin-left: 40%;
+}
 
 footer {
-  background-color: var(--background-nav);
+  background-color: var(--secondary);
   color: var(--primary);
   padding: 40px 0;
   text-align: center;
