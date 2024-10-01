@@ -40,12 +40,15 @@
         </button>
         <ul class="sub-menu">
           <div>
-            <li><a href="#">Iniciar Sesión</a></li>
+            <li><a href="/acceso">Iniciar Sesión</a></li>
             <li><a href="/registro">Crear cuenta</a></li>
           </div>
         </ul>
       </li>
     </ul>
+    {% if mensaje1 %}
+        {{mensaje1}}
+        {% endif %}
   </nav>
     <main>
     {% block content %}
