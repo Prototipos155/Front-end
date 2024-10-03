@@ -1,35 +1,37 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<body><br><br><br>
+
+<div class="container">
+
+    <h2 class="form-title">Inicia Sesión</h2>
+    <form action="/acceso" id="acceso_form" class="form" method="post">
+
+        <h1>Inicie sesion</h1>
+
+        {% if mensaje %}
+            {{mensaje}}
+            {% endif %}
 
 
-<form action="/acceso" id="acceso_form" method="post">
+        <label>Correo</label>
+        <input class='input' type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
 
-    <h1>Inicie sesion</h1>
 
-    {% if mensaje %}
-        {{mensaje}}
-        {% endif %}
 
-<div>
-    <label>Ingrese su correo</label>
-    <input type="email" name="correo" id="correo" required>
+        <label>Apodo</label>
+        <input class='input' type="text" name="apodo" id="apodo" placeholder="Ingrese su Apodo" required>
+
+
+
+        <label>Contraseña</label>
+        <input class='input' type="text" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required>
+
+        <center>
+        <button type="submit" class="btn-registrarse">Enviar</button>
+        </center>
+
+    </form>
+
 </div>
-
-<div>
-    <label>Ingrese su apodo</label>
-    <input type="text" name="apodo" id="apodo" required>
-</div>
-
-<div>
-    <label>Ingrese su contraseña</label>
-    <input type="text" name="contraseña" id="contraseña" required>
-</div>
-
-<button type="submit">Enviar</button>
-
-</form>
-
-</body>
 {% endblock %}

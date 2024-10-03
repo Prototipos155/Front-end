@@ -4,24 +4,20 @@
 <div class="container">
     <h2 class="form-title">Complete los siguientes campos para su registro en P2P:</h2>
 
-    <form action="/registro" name="form-registro" class="form-registro" method="post">
+    <form action="/registro" name="form-registro" class="form" method="post">
         <h4>¿Qué desea ser?</h4>
-        <div class="role-selection">
 
-            
-            <label class="radio" for="checkbox1">
-                <span class="label">Alumno</span>
-                <input type="radio" name="alumno"  id="rol" value="alumno">
-                <span class="checkmark"></span>
+
+        <div class="role-selection radio-inputs">
+            <label class="radio" >
+              <input type="radio" name="radio" id="rol" value="alumno">
+              <span class="name">Alumno</span>
             </label>
-
-            <label class="radio" for="checkbox2">
-                <span class="label">Tutor</span>
-                <input type="radio" name="tutor" id="rol" value="tutor">
-                <span class="checkmark"></span>
+            <label class="radio">
+              <input type="radio" name="radio" id="rol" value="tutor">
+              <span class="name">Tutor</span>
             </label>
-            
-
+                
         </div>
 
         <label for="nombres">Nombres:</label>
